@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  "poppins", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+}
+
+/* styling main container */
+
+.container {
+    background-color:transparent;
+    box-shadow: 0 0 5px 2px #fff;
+    padding: 25px;
+    width: 350px;
+    max-width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* styling result container */
+
+.result-container{
+    box-shadow: 0 0 1px 1px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+#result{
+    word-wrap: break-word;
+    max-width: calc(100% - 40px);
+    color: #fff;
+}
+
+.copyBtn {
+    position: absolute;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+
+#generate-password ,
+.copyBtn{
+    font-size: 20px;
+    padding: 8px 12px;
+    background-color: transparent;
+    color: #fff;
+    box-shadow: 0 0 1px 1px #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#generate-password {
+    display: inline-block;
+    width: 100%;
+}
+
+#generate-password:hover ,
+.copyBtn:hover{
+    opacity: 0.8;
+}
+
+/* option styling */
+
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.option #Passlength {
+    width: 45px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+}
+
+/* notification theme added instead of alert */
+
+.notification {
+    position: fixed;
+    top: 1rem;
+    right: -20rem;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.active {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+
+
+/* Adding responsiveness */
+
+@media(max-width:400px) {
+    .container {
+        padding: 10px;
+        width: 300px;
+    }
+}
