@@ -80,7 +80,14 @@ function generatePassword(upper, lower, number, symbol, length) {
   }
 
   //slicing, because the loop runs through each checkbox function as many times as the provided length.
-  final_password = Result.slice(0, length);
+  //in small screens , input is not working!!
+  if (length < 4 || length > 16) {
+    final_password = "";
+    notification.style.backgroundColor = "rgb(160,0,0)";
+    toast_notification("Valid password length : [4,16]");
+  } else {
+    final_password = Result.slice(0, length);
+  }
   return final_password;
 }
 
