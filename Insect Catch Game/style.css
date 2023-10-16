@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    overflow-x: hidden;
+    background-color: #000;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+    border-bottom: 2px solid #fff;
+    transition: margin 0.5s ease-in-out;
+}
+
+.page.up {
+    margin-top: -100vh;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*********************** page-1 styling ***************************/
+
+.page-1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-1 h1 {
+    color: rgb(255, 255, 255 , 0.8);
+}
+
+.start-btn {
+    font-size: 1.5rem;
+    background-color: transparent;
+    box-shadow: 0 0 1px 1px #fff;
+    font-family: inherit;
+    color: rgb(255, 255, 255 , 0.8);
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    border: none;
+    transition: all 0.3s;
+}
+
+.start-btn:hover {
+    color: rgb(255, 255, 255 , 1);
+    box-shadow: 0 0 1px 3px #fff;
+}
+
+
+/*********************** page-2 styling ***************************/
+
+.page-2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.page-2 h1 {
+    color: rgb(255, 255, 255 , 0.8);
+    margin-bottom: 2rem;
+}
+
+.btn-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.btn-container li {
+    margin: 0 2rem;
+}
+
+
+.choose-insect-btn {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 2px 1px #fff;
+    background-color: transparent;
+    color: #fff;
+    font-family: inherit;
+    padding: 1rem;
+}
+
+.choose-insect-btn:hover {
+    box-shadow: 0 0 2px 2px #fff;
+    cursor: pointer;
+}
+
+.choose-insect-btn p {
+    margin: 0.5rem 0;
+}
+
+.choose-insect-btn img {
+    height : 150px;
+    width: 150px;
+    object-fit: contain;
+}
+
+
+/*********************** page-3 styling ***************************/
+
+.page-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255 , 0.8);
+    position: relative;
+}
+
+
+#time , #score {
+    position: absolute;
+    top: 20px;
+}
+
+#score {
+    right: 40px;
+}
+
+#time {
+    left: 20px;
+}
+
+#message {
+    line-height: 2;
+    background-color: rgba(255,255,255,0.6);
+    color: #000;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+    transition: opacity all 0.5s;
+}
+
+
+#message.mess_visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#end_game {
+    background-color: #000;
+    color: rgba(255,255,255,0.6);
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.insect {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50% , -50%) scale(1);
+    transition: transform 0.3s ease-in-out ;
+    width: 100px;
+    height: 100px;
+}
+
+.insect.caught {
+    transform: translate(-50% , -50%) scale(0);
+}
+
+.insect img {
+    width: 100px;
+    height: 100px;
+}
+
+/*********************** Responsiveness ***************************/
+
+@media(max-width : 1024px) {
+    .page-1 h1 {
+        line-height: 2;
+    }
+
+    .page-2 h1 {
+        line-height: 2;
+        font-size: 1.5rem;
+    }
+
+    .choose-insect-btn img {
+        height: 90px;
+        width: 120px;
+    }
+
+    .btn-container {
+        align-items: center;
+        gap: 10px;
+    }
+
+}
+
+
+@media(max-width : 550px) {
+    .page-1 h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-2 h1 {
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .choose-insect-btn img {
+        height: 50px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 520px) {
+    #score {
+        top: 50px;
+        left: 20px;
+    }
+  }
+
+
+
+@media(max-width : 450px) {
+    .btn-container {
+        margin-top: 1rem;
+    }
+
+    .choose-insect-btn img {
+        height: 30px;
+        width: 120px;
+    }
+}
