@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: 'Roboto' , 'sans-serif';
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #282A3A;
+}
+
+li {
+    list-style: none;
+}
+
+/* h1 styling */
+
+h1 {
+    color: #E2C799;
+    font-size: 10rem;
+    opacity: 0.5;
+}
+
+/* form styling */
+
+.form {
+    box-shadow: 0 0 5px 1px #000;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    border: none;
+    color: #E2C799;
+    font-size: 2rem;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    padding: 1rem;
+    border-bottom:2px solid #333;
+}
+
+.input::placeholder {
+    color: #E2C799;
+    opacity: 0.6;
+}
+
+
+/* ul & li styling */
+/* class : task */
+/* class : completed (line through and opacity down)*/
+
+.todos li {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-top: 1px solid rgb(51, 51, 51);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task {
+    color: #E2C799;
+    /* It will only affect the text when there are no spaces between words. */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:no-wrap;
+}
+
+.todos .task.completed {
+    color: rgb(255, 255, 255 , 0.4);
+    text-decoration: line-through;
+}
+
+/* cross button styling */
+/* class : completed (opacity down and cursor not allowed)*/
+/* and will be removed after 1500ms */
+/* id : cross_btn */
+
+.cross_btn {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.cross_btn:hover {
+    opacity: 0.6;
+}
+
+.cross_btn.completed {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+
+/* Maintaining responsiveness */
+
+@media(max-width:530px) {
+    h1{
+        font-size: 7rem;
+    }
+
+    .form {
+        width: 90%;
+    }
+}

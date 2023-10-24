@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- h1 -->
+    <h1>todos</h1>
+
+    <!-- form start -->
+    <form class="form">
+      <!-- Here we will list our todo -->
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter your todo"
+        autocomplete="off"
+        required
+      />
+
+      <!-- Here it will get added in the form of a list -->
+      <ul class="todos">
+        <!-- The list items will be added/deleted dynamically -->
+        <!-- <li> -->
+        <!-- <span class="task completed">code more</span
+          ><i class="fa-solid fa-circle-xmark completed" id="cross_btn"></i> -->
+        <!-- </li> -->
+      </ul>
+    </form>
+    <!-- form end -->
+    <script
+      src="https://kit.fontawesome.com/f6dcd8ba33.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
