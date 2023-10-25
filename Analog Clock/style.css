@@ -1,0 +1,152 @@
+* ,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: #fff;
+    background-color: #000;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    box-shadow: 0 0 3px 1px #fff;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+
+    /* for dot positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* center dot position */
+.clock::before {
+    position: absolute;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+}
+
+/* sec , min , hour positioning */
+
+.hand {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hand i {
+    position: absolute;
+    width: 0.5rem;
+    background-color: var(--clr);
+    border-radius: 0.5rem;
+}
+
+#hour i {
+    height:6rem ;
+}
+#minute i {
+    height: 10rem;
+}
+#second i {
+    height: 10rem;
+    width: 0.1rem;
+}
+
+
+/* numbers position */
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg*var(--i)));
+    inset: 10px;
+    text-align: center;
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 2rem;
+}
+
+/* responsiveness */
+
+@media(max-width:600px) {
+    .clock {
+        width: 350px;
+        height: 350px;
+    }
+
+    .clock span {
+        inset : 3px;
+    }
+
+    .clock span b {
+        font-size: 1.5rem;
+    }
+
+    #hour i {
+        height:4.5rem ;
+    }
+
+    #minute i {
+        height: 7rem;
+    }
+
+    #second i {
+        height: 7rem;
+    }
+}
+
+@media(max-width:500px) {
+    .clock {
+        height: 270px;
+        width: 270px;
+    }
+
+    #minute i {
+        height: 6rem;
+    }
+
+    #second i {
+        height: 6rem;
+    }
+}
+
+@media(max-width : 370px) {
+
+    .clock {
+        height: 250px;
+        width: 250px;
+    }
+
+    #hour i {
+        height:3.5rem ;
+    }
+
+    #second i {
+        height: 5rem;
+    }
+
+    #minute i {
+        height: 5rem;
+    }
+}
