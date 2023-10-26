@@ -10,4 +10,5 @@
     <li><a href="https://insect-catching-game-project-7.netlify.app/">Insect Catching Game</a></li>
     <li><a href="https://todo-list-project8.netlify.app/">To-Do List</a></li>
     <li><a href="https://analog-clock-project9.netlify.app/">Analog Clock</a></li>
+    <li><a href="https://dictionary-app-project10.netlify.app/">Dictionary App</a></li>
 </ol>
