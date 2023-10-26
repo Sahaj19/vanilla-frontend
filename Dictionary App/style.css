@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* ,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 99, 71 , 0.5);
+    width: 100vw;
+}
+
+/* header styling */
+
+header {
+    background-color: tomato;
+    border-bottom: 3px solid #000;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* main styling */
+
+main {
+    min-height: 80vh;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* main form styling */
+
+main form {
+    display: flex;
+    justify-content: center;
+}
+
+/* text input styling */
+
+form input[type="text"] {
+    flex-grow: 1;
+    background-color: rgb(255, 99, 71 , 0.5);
+    color: #000;
+}
+
+form input[type="text"]::placeholder {
+    color: #000;
+    opacity: 0.7;
+}
+
+/* text input & button common styling */
+
+form input[type="text"] ,
+form button[type="submit"] {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    border-radius:5px;
+    padding: 0.7rem;
+    outline: none;
+}
+
+/* button styling */
+
+form button[type="submit"] {
+    cursor: pointer;
+    margin-left: 1rem;
+    background-color: tomato;
+}
+
+form button[type="submit"]:hover {
+    transform: scale(1.01);
+    opacity: 0.9;
+}
+
+/* result div styling */
+
+.result {
+    margin-top: 2rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    background-color: tomato;
+    padding: 0.7rem;
+}
+
+.read_more_btn {
+    margin: 1rem 0;
+}
+
+.read_more_btn a {
+    color: tomato;
+    text-decoration: none;
+    background-color:#000;
+    padding: 0.5rem;
+}
+
+/* responsiveness */
+@media(max-width:450px) {
+    main form {
+        flex-direction: column;
+    }
+
+    form button[type="submit"] {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+}
