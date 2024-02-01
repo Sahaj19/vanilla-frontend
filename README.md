@@ -11,4 +11,3 @@
 9. [Analog Clock](https://analog-clock-project9.netlify.app/)
 10. [Dictionary App](https://dictionary-app-project10.netlify.app/)
 
-- Feel free to explore these projects and get inspired! Contributions, feedback, and suggestions are always welcome.
