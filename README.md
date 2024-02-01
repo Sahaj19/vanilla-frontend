@@ -1,8 +1,4 @@
-# Awesome Projects Showcase 🚀
-
-Welcome to a collection of amazing projects! Below are links to various web applications developed with passion and creativity.
-
-### Projects Links
+### Projects Links 🌟
 
 1. [Dad Jokes Generator](https://dad-jokes-project1.netlify.app/)
 2. [Github Profile Searcher](https://github-profile-searcher-project2.netlify.app/)
@@ -15,4 +11,4 @@ Welcome to a collection of amazing projects! Below are links to various web appl
 9. [Analog Clock](https://analog-clock-project9.netlify.app/)
 10. [Dictionary App](https://dictionary-app-project10.netlify.app/)
 
-Feel free to explore these projects and get inspired! Contributions, feedback, and suggestions are always welcome.
+- Feel free to explore these projects and get inspired! Contributions, feedback, and suggestions are always welcome.
